@@ -10,7 +10,7 @@ var todoController = require('./api/controllers/todoController')
 
 var app = express()
 
-var port = process.env.PORT || 4000
+var port = process.env.PORT || 4000 || 'https://mern-app-manhha.herokuapp.com/'
 
 app.use('/assets', express.static(__dirname + '/public'))
 // cung cấp tài nguyên tĩnh cho user

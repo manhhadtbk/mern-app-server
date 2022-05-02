@@ -2,6 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser') // nhan request tu user
 var morgan = require('morgan') // log ra cac request den
 var mongoose = require('mongoose')
+const cors = require('cors')
 
 var config = require('./config')
 
@@ -20,6 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
 app.set('view engine', 'ejs')
+
+app.use(cors())
 
 // db info
 // console.log(config.getDbConnectionString());
